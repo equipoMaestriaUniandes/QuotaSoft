@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Domain", "1.Domain", "{9B02DEA8-B3B4-4BCC-99F8-B22F2AA5F821}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infraestructure", "2.Infraestructure", "{27EB156B-52AE-42FD-A5AD-DC4343949BFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Application", "3.Application", "{EC31C301-4D85-4200-84EB-304031D160B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.WebApi", "4.WebApi", "{AF74FF65-C028-4356-9916-69D2842C7C3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Domain.Entities", "1.Domain\Quota.Domain.Entities\QuotaSoft.Domain.Entities.csproj", "{457672A2-FB8F-4C5B-AA9F-14150D6EFEFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Domain.Interfaces", "1.Domain\QuotaSoft.Domain.Interfaces\QuotaSoft.Domain.Interfaces.csproj", "{02601384-3390-428E-884E-B95C3FC1658E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Domain.Services", "1.Domain\QuotaSoft.Domain.Services\QuotaSoft.Domain.Services.csproj", "{26810B71-382E-4392-AB26-F1C1F7B39075}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Infra.Data", "2.Infraestructure\QuotaSoft.Infra.Data\QuotaSoft.Infra.Data.csproj", "{C5100833-2ED2-4B31-8FFD-EF99A246A9CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Infra.IoC", "2.Infraestructure\QuotaSoft.Infra.IoC\QuotaSoft.Infra.IoC.csproj", "{771A1BB6-AE6A-4C51-A480-7EA48F2EEFBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Application.Interfaces", "3.Application\QuotaSoft.Application.Interfaces\QuotaSoft.Application.Interfaces.csproj", "{ED47D9A4-EB9D-4458-991F-2AD23961BEE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.Application.Services", "3.Application\QuotaSoft.Application.Services\QuotaSoft.Application.Services.csproj", "{E82105F0-5CDD-4528-B52B-FE18A7B23803}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuotaSoft.WebApi", "4.WebApi\QuotaSoft.WebApi\QuotaSoft.WebApi.csproj", "{D6947F3C-8C1D-416C-BA99-2BF1CA949BC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{457672A2-FB8F-4C5B-AA9F-14150D6EFEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457672A2-FB8F-4C5B-AA9F-14150D6EFEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457672A2-FB8F-4C5B-AA9F-14150D6EFEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457672A2-FB8F-4C5B-AA9F-14150D6EFEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02601384-3390-428E-884E-B95C3FC1658E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02601384-3390-428E-884E-B95C3FC1658E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02601384-3390-428E-884E-B95C3FC1658E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02601384-3390-428E-884E-B95C3FC1658E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26810B71-382E-4392-AB26-F1C1F7B39075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26810B71-382E-4392-AB26-F1C1F7B39075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26810B71-382E-4392-AB26-F1C1F7B39075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26810B71-382E-4392-AB26-F1C1F7B39075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5100833-2ED2-4B31-8FFD-EF99A246A9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5100833-2ED2-4B31-8FFD-EF99A246A9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5100833-2ED2-4B31-8FFD-EF99A246A9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5100833-2ED2-4B31-8FFD-EF99A246A9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771A1BB6-AE6A-4C51-A480-7EA48F2EEFBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771A1BB6-AE6A-4C51-A480-7EA48F2EEFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771A1BB6-AE6A-4C51-A480-7EA48F2EEFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771A1BB6-AE6A-4C51-A480-7EA48F2EEFBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED47D9A4-EB9D-4458-991F-2AD23961BEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED47D9A4-EB9D-4458-991F-2AD23961BEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED47D9A4-EB9D-4458-991F-2AD23961BEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED47D9A4-EB9D-4458-991F-2AD23961BEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82105F0-5CDD-4528-B52B-FE18A7B23803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82105F0-5CDD-4528-B52B-FE18A7B23803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82105F0-5CDD-4528-B52B-FE18A7B23803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82105F0-5CDD-4528-B52B-FE18A7B23803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6947F3C-8C1D-416C-BA99-2BF1CA949BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6947F3C-8C1D-416C-BA99-2BF1CA949BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6947F3C-8C1D-416C-BA99-2BF1CA949BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6947F3C-8C1D-416C-BA99-2BF1CA949BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{457672A2-FB8F-4C5B-AA9F-14150D6EFEFB} = {9B02DEA8-B3B4-4BCC-99F8-B22F2AA5F821}
+		{02601384-3390-428E-884E-B95C3FC1658E} = {9B02DEA8-B3B4-4BCC-99F8-B22F2AA5F821}
+		{26810B71-382E-4392-AB26-F1C1F7B39075} = {9B02DEA8-B3B4-4BCC-99F8-B22F2AA5F821}
+		{C5100833-2ED2-4B31-8FFD-EF99A246A9CA} = {27EB156B-52AE-42FD-A5AD-DC4343949BFC}
+		{771A1BB6-AE6A-4C51-A480-7EA48F2EEFBD} = {27EB156B-52AE-42FD-A5AD-DC4343949BFC}
+		{ED47D9A4-EB9D-4458-991F-2AD23961BEE3} = {EC31C301-4D85-4200-84EB-304031D160B7}
+		{E82105F0-5CDD-4528-B52B-FE18A7B23803} = {EC31C301-4D85-4200-84EB-304031D160B7}
+		{D6947F3C-8C1D-416C-BA99-2BF1CA949BC7} = {AF74FF65-C028-4356-9916-69D2842C7C3A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {970B587A-5BF6-4778-8880-5EF4D8CE7016}
+	EndGlobalSection
+EndGlobal

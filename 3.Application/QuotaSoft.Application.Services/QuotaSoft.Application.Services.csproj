@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1.Domain\QuotaSoft.Domain.Services\QuotaSoft.Domain.Services.csproj" />
+    <ProjectReference Include="..\QuotaSoft.Application.Interfaces\QuotaSoft.Application.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

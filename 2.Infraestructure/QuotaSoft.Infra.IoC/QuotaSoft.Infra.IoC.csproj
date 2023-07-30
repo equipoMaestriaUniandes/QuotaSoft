@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1.Domain\QuotaSoft.Domain.Interfaces\QuotaSoft.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\1.Domain\QuotaSoft.Domain.Services\QuotaSoft.Domain.Services.csproj" />
+    <ProjectReference Include="..\..\3.Application\QuotaSoft.Application.Interfaces\QuotaSoft.Application.Interfaces.csproj" />
+    <ProjectReference Include="..\..\3.Application\QuotaSoft.Application.Services\QuotaSoft.Application.Services.csproj" />
+    <ProjectReference Include="..\QuotaSoft.Infra.Data\QuotaSoft.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
