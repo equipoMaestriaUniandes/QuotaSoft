@@ -30,8 +30,8 @@
         /// <returns></returns>
         public Rol RolByUser(int userId)
         {
-            var query = "SELECT r.* FROM [perezgomez].[roles] r " +
-                "INNER JOIN [perezgomez].[usuarios] u ON r.Id = u.rol " +
+            var query = "SELECT r.* FROM [dbo].[rol] r " +
+                "INNER JOIN [dbo].[user] u ON r.Id = u.rol " +
                 "WHERE u.id = @userId";
             return base.GetQueryData(query, new { userId = userId })?.FirstOrDefault();
         }

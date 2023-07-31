@@ -20,11 +20,11 @@
         /// <returns></returns>
         public IEnumerable<Menu> GetMenuByRol(User user)
         {
-            var query = "SELECT m.* FROM [perezgomez].[menus] m " +
-                "INNER JOIN[perezgomez].[rolpermisos] rp ON m.Id = rp.menuId " +
-                "INNER JOIN[perezgomez].[roles] r ON rp.ROL = r.Id  " +
+            var query = "SELECT m.* FROM [dbo].[menu] m " +
+                "INNER JOIN[dbo].[permission] rp ON m.Id = rp.menuId " +
+                "INNER JOIN[dbo].[rol] r ON rp.ROL = r.Id  " +
                 "WHERE r.Id = @rolId";
-            return base.GetQueryData(query, new { rolId = user.rol });
+            return base.GetQueryData(query, new { rolId = user.Rol?.id });
         }
     }
 }

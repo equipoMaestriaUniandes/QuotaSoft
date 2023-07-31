@@ -3,15 +3,12 @@
     using System;
     using Dapper.Contrib.Extensions;
 
-    [Table("perezgomez.roles")]
+    [Table("dbo.rol")]
     [Serializable]
     public class Rol : BaseEntity
     {
-        public int? rol { get; set; }
-
-        public string descripcion { get; set; }
-
-        public int? activo { get; set; }
+        public string RolName { get; set; }
+        public bool Active { get; set; }
 
     }
 }

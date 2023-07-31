@@ -5,7 +5,7 @@
     /// <summary>
     /// Defines the <see cref="Country" />
     /// </summary>
-    [Table("perezgomez.paises")]
+   
     public class Country : Location
     {
     }

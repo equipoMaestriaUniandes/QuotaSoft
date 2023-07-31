@@ -39,7 +39,7 @@
             return Ok(this.userApplication.GetUsers());
         }
 
-        [Authorize]
+        
         [HttpPost]
         [Route("InsertUser")]
         public IActionResult InsertUser([FromBody] User user)

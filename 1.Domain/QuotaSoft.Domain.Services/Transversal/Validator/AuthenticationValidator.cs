@@ -17,8 +17,8 @@
         /// <param name="password">The password<see cref="string"/></param>
         public AuthenticationValidator(IUserRepository userRepository, string password) : base(userRepository)
         {
-            RuleFor(r => r).Must(e => this.ArePasswordsEquals(e.contrasena, password)).WithMessage("Usuario o contraseña incorrectos.");
-            RuleFor(r => r.activo).Must(IsActive).WithMessage("El usuario no se encuentra activo.");
+            RuleFor(r => r).Must(e => this.ArePasswordsEquals(e.Password, password)).WithMessage("Usuario o contraseña incorrectos.");
+            //RuleFor(r => r.active).Must(IsActive).WithMessage("El usuario no se encuentra activo.");
            //RuleFor(r => r.rol).Must(IsRolActive).WithMessage("El rol del usuario esta inactivo.");
         }
 

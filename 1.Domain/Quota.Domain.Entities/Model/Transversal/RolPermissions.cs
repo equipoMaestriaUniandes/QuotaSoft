@@ -6,7 +6,7 @@ namespace Quota.Domain.Entities.Model.Transversal
     /// <summary>
     /// Defines the <see cref="RolPermissions" />
     /// </summary>
-    [Table("perezgomez.roles")]
+
     public class RolPermissions : BaseEntity
     {
         /// <summary>
@@ -27,18 +27,18 @@ namespace Quota.Domain.Entities.Model.Transversal
         /// <summary>
         /// Gets or sets the activo.
         /// </summary>
-        public int activo { get; set; }
+        public int active { get; set; }
 
         /// <summary>
         /// Gets or sets the Menu
         /// </summary>
         [Computed]
-        public Menu menuObj { get; set; }
+        public Menu Menu { get; set; }
 
         /// <summary>
         /// Gets or sets the Rol
         /// </summary>
         [Computed]
-        public Rol rolObj { get; set; }
+        public Rol Rol { get; set; }
     }
 }

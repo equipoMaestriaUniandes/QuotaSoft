@@ -56,7 +56,7 @@
                 throw new ArgumentNullException(nameof(user));
             }
 
-            user.contrasena = Util.GetCrypt(user.contrasena);
+            user.Password = Util.GetCrypt(user.Password);
             var validator = new BaseValidator<User>(userRepository);
 
             var validations = validator.Validate(user);
@@ -229,8 +229,7 @@
             }
             else
             {
-                userIn.rolObj = this.rolRepository.RolByUser(userIn.id);
-                userIn.rol = userIn.rolObj.id;
+                userIn.Rol = this.rolRepository.RolByUser(userIn.id);
             }
             return userIn;
         }

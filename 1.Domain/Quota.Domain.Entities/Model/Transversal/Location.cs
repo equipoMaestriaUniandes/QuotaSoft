@@ -4,6 +4,6 @@
 
     public class Location : BaseEntity
     {
-        public string nombre { get; set; }
+        public string name { get; set; }
     }
 }

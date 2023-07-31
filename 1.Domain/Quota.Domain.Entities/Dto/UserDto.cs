@@ -16,15 +16,13 @@
         /// </summary>
         public string name { get; set; }
 
+        public string lastName { get; set; }
+
         /// <summary>
         /// Gets or sets the userName
         /// </summary>
         public string userName { get; set; }
 
-        /// <summary>
-        /// Gets or sets the email
-        /// </summary>
-        public string email { get; set; }
 
         /// <summary>
         /// Gets or sets the token

@@ -38,21 +38,13 @@
             var loginResponse = new LoginResponse();
             var userAux = this.userService.SignIn(credencialDto.userName, credencialDto.password);
             if(userAux != null) {
-            var rolAux = this.rolService.GetMenuByRol(userAux.id);
+            //var rolAux = this.rolService.GetMenuByRol(userAux.id);
                 loginResponse.user = new UserDto
                 {
                     id = userAux.id,
-                    name = userAux.nombre,
-                    userName = userAux.usuario,
-                    email = userAux.correoelectronico,
-                    token = this.userService.GetToken(userAux.usuario, userAux.id),
-                    rol = new RolDto(){
-                        id = rolAux.id,
-                        rolCode = rolAux.rol,
-                        rolName = rolAux.descripcion,
-                   // isAdmin = userAux.rol.Equals(nameof(RolEnum.ADM)) ?? false
-                        isAdmin = false
-                    }
+                    name = userAux.Name,
+                    userName = userAux.UserName,
+                    token = this.userService.GetToken(userAux.UserName, userAux.id)                   
                 }; 
             }
             return HelperGeneric<LoginResponse>.CastToGenericResponse(Helper.ManageResponse(loginResponse));
@@ -76,18 +68,10 @@
                 userAuth = new UserDto
                 {
                     id = userAux.id,
-                    name = userAux.nombre,
-                    userName = userAux.usuario,
-                    email = userAux.correoelectronico,
-                    token = this.userService.GetToken(userAux.usuario, userAux.id),
-                    rol = new RolDto()
-                    {
-                        id = rolAux.id,
-                        rolCode = rolAux.rol,
-                        rolName = rolAux.descripcion,
-                        // isAdmin = userAux.rol.Equals(nameof(RolEnum.ADM)) ?? false
-                        isAdmin = false
-                    }
+                    name = userAux.Name,
+                    lastName = userAux.LastName,
+                    userName = userAux.UserName,
+                    token = this.userService.GetToken(userAux.UserName, userAux.id)                 
                 };
             }
             return HelperGeneric<UserDto>.CastToGenericResponse(Helper.ManageResponse(userAuth));

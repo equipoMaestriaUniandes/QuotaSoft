@@ -60,9 +60,9 @@
                 return false;
             }
 
-            var usuario = this.userRepository.GetUserAuth(requestAuthorization.userName);
+            var user = this.userRepository.GetUserAuth(requestAuthorization.userName);
             // return usuario.Rol?.Tipo?.Codigo.Equals(nameof(TipoRolCodigoEnum.ADM)) ?? false;
-            return usuario.rol == ((int)RolEnum.ADM) ? true : false;
+            return user.Rol?.id == ((int)RolEnum.ADM) ? true : false;
         }
 
         /// <summary>
@@ -140,7 +140,7 @@
         {
             if (requestAuthorization.isAuth)
             {
-                var rol = userRepository.GetUserAuth(requestAuthorization.userName).rolObj;
+                var rol = userRepository.GetUserAuth(requestAuthorization.userName).Rol;
                 return this.rolPermissionsRepository.GetPermissionsByRol(rol.id);
             }
 
