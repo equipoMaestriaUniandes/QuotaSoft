@@ -11,6 +11,9 @@
         ADM = 1,
 
         [Description("USER")]
-        USER = 2        
+        USER = 2,
+
+        [Description("RETIREENTITY")]
+        RETIREENTITY = 3
     }
 }

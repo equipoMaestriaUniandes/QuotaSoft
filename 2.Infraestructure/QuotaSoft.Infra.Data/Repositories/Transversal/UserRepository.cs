@@ -18,7 +18,7 @@
         /// <returns></returns>
         public User GetUserAuth(string userName)
         {
-            var query = "SELECT * FROM [perezgomez].[usuarios] WHERE usuario = @userName";
+            var query = "SELECT * FROM [dbo].[user] WHERE userName = @userName";
             return base.GetQueryData(query, new { userName = userName })?.FirstOrDefault();
         }
 
@@ -29,7 +29,7 @@
         /// <returns></returns>
         public User GetUserById(int? userId)
         {
-            var query = "SELECT * FROM [perezgomez].[usuarios] WHERE id = @userId";
+            var query = "SELECT * FROM [dbo].[user] WHERE id = @userId";
             return base.GetQueryData(query, new { userId = userId })?.FirstOrDefault();
         }
 
@@ -40,7 +40,7 @@
         /// <returns></returns>
         public User GetUserByUserName(string userName)
         {
-            var query = "SELECT * FROM [perezgomez].[usuarios] WHERE usuario = @usuario";
+            var query = "SELECT * FROM [dbo].[user] WHERE userName = @usuario";
             return base.GetQueryData(query, new { usuario = userName })?.FirstOrDefault();
         }
 
@@ -51,7 +51,7 @@
         /// <returns></returns>
         public User GetUserByUserCode(int userCode)
         {
-            var query = "SELECT * FROM [perezgomez].[usuarios] WHERE id = @userCode";
+            var query = "SELECT * FROM [dbo].[user] WHERE id = @userCode";
             return base.GetQueryData(query, new { userCode = userCode })?.FirstOrDefault();
         }
     }

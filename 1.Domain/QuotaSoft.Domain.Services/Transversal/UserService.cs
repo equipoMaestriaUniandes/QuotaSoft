@@ -21,6 +21,7 @@
     using Microsoft.Extensions.Options;
     using Quota.Domain.Entities.Config;
     using Quota.Domain.Services.Utilities;
+    using System.ComponentModel.DataAnnotations;
 
     /// <summary>
     /// Defines the <see cref="UserService" />
@@ -58,6 +59,7 @@
 
             user.Password = Util.GetCrypt(user.Password);
             var validator = new BaseValidator<User>(userRepository);
+            user.RolId = (int)RolEnum.USER;
 
             var validations = validator.Validate(user);
             if (!validations.IsValid)
@@ -68,46 +70,48 @@
             return user;
         }
 
-        /*
-        public override void Update(User user)
-        {
+        
+        public User UpdateUser(User user)
+        {      
             if (user == null)
             {
                 throw new ArgumentNullException(nameof(user));
             }
 
-            var oldUsuario = this.userRepository.ObtenerUsuarioPorId(user.id);
+           var userAux = this.GetUserByUserName(user.UserName);
+            userAux.Name = user.Name;
+            userAux.LastName = user.LastName;
 
-            ++Validator = new GeneralValidator(userRepository, rolRepository);
+            var validator = new BaseValidator<User>(userRepository);           
 
-            if (!string.IsNullOrEmpty(user.password))
+            var validations = validator.Validate(user);
+            if (!validations.IsValid)
             {
-                var utilidad = new UtilidadEncriptacion();
-                user.password = Encoding.UTF8.GetString(Convert.FromBase64String(user.password));
-                base.GeneralValidator(user);
-                Validator = null;
-                user.password = utilidad.Encriptar(user.password);
+                throw new ExceptionGeneric(ExceptionGenericTypes.Validations, validations.Errors.First().ErrorMessage);
             }
-            else
-            {
-                user.password = oldUsuario.password;
-            }
-
-            base.Update(user);
+            this.userRepository.Update(userAux);
+            return userAux;
         }
-        */
+        
 
-        /*
-        public override void Delete(User user)
+        
+        public User DeleteUser(int id)
         {
-            if (user == null)
+            if (id < 0)
             {
                 throw new ExceptionGeneric(ExceptionGenericTypes.Validations, "El user no ha sido encontrado.");
             }
+            var userAux = this.GetUser(id);
+            var validator = new BaseValidator<User>(userRepository);
 
-            base.Validator = new EliminarValidator(this.userRepository);
-            base.Delete(user);
-        }*/
+            var validations = validator.Validate(userAux);
+            if (!validations.IsValid)
+            {
+                throw new ExceptionGeneric(ExceptionGenericTypes.Validations, validations.Errors.First().ErrorMessage);
+            }
+            this.userRepository.Delete(userAux);
+            return userAux;
+        }
 
         /*
         public IEnumerable<User> GetByRol(int rolId)
@@ -169,7 +173,7 @@
         public User SignIn(string userName, string password)
         {
             User userAuth = this.userRepository.GetUserAuth(userName);
-            //password = Encoding.UTF8.GetString(Convert.FromBase64String(password));
+            password = Util.GetCrypt(password);
             if (userAuth == null)
             {
                 throw new ExceptionGeneric(ExceptionGenericTypes.Validations, "User o password wrong.");

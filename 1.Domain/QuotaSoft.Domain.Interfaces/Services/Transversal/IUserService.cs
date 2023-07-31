@@ -75,5 +75,9 @@
 
         User InsertUser(User user);
 
+        User UpdateUser(User user);
+
+        User DeleteUser(int id);
+
     }
 }

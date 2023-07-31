@@ -3,7 +3,7 @@
     using System;
     using Dapper.Contrib.Extensions;
 
-    [Table("dbo.rol")]
+    [Table("[dbo].[rol]")]
     [Serializable]
     public class Rol : BaseEntity
     {

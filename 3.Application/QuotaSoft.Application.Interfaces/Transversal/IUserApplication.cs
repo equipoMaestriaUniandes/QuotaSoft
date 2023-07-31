@@ -64,5 +64,9 @@
         /// </summary>
         /// <returns></returns>
         GenericResponse<User> InsertUser(User user);
+
+        GenericResponse<User> UpdateUser(User user);
+
+        GenericResponse<User> DeleteUser(int id);
     }
 }

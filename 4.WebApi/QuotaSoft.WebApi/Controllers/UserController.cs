@@ -24,7 +24,7 @@
         /// 
         /// </summary>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         [Route("GetUsers")]
         public IActionResult GetUsers()
@@ -51,6 +51,33 @@
 
             string token = Request.Headers[MyHeadersEnum.Authorization];
             return Ok(this.userApplication.InsertUser(user));
+        }
+
+        [HttpPut]
+        [Route("UpdateUser")]
+        public IActionResult UpdateUser([FromBody] User user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            string token = Request.Headers[MyHeadersEnum.Authorization];
+            return Ok(this.userApplication.UpdateUser(user));
+        }
+
+
+        [HttpDelete]
+        [Route("DeleteUser")]
+        public IActionResult DeletetUser(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            string token = Request.Headers[MyHeadersEnum.Authorization];
+            return Ok(this.userApplication.DeleteUser(id));
         }
     }
 }

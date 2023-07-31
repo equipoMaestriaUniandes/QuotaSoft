@@ -4,7 +4,7 @@
     using Quota.Domain.Entities.Model.Transversal;
     using System;
         
-    [Table("dbo.user")]
+    [Table("[dbo].[user]")]
     [Serializable]
     public class User: BaseEntity
     {

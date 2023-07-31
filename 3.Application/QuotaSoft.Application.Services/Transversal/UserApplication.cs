@@ -117,5 +117,19 @@
 
             return HelperGeneric<User>.CastToGenericResponse(Helper.ManageResponse(obj));
         }
+
+        public GenericResponse<User> UpdateUser(User user)
+        {
+            var obj = this.userService.UpdateUser(user);
+
+            return HelperGeneric<User>.CastToGenericResponse(Helper.ManageResponse(obj));
+        }
+
+        public GenericResponse<User> DeleteUser(int id)
+        {
+            var obj = this.userService.DeleteUser(id);
+
+            return HelperGeneric<User>.CastToGenericResponse(Helper.ManageResponse(obj));
+        }
     }
 }
