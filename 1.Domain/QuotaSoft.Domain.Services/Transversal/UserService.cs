@@ -113,56 +113,6 @@
             return userAux;
         }
 
-        /*
-        public IEnumerable<User> GetByRol(int rolId)
-        {
-            return this.userRepository.GetByRol(rolId);
-        }*/
-
-      /*  public User UpdatePassword(int userId, string oldPassword, string newPassword)
-        {
-
-            var user = this.userRepository.GetById(userId);
-
-            if (user == null)
-            {
-                throw new ArgumentNullException(nameof(user));
-            }
-
-            Validator = new GeneralValidator(userRepository, rolRepository, obrasJefeSupervisorRepositorio);
-
-            user.AuditoriaFecha = user.AuditoriaFecha <= DateTime.MinValue ? DateTime.Now : user.AuditoriaFecha;
-            user.AuditoriaUsuarioModifica = user.Id;
-            var utilidad = new UtilidadEncriptacion();
-            passwordActual = Encoding.UTF8.GetString(Convert.FromBase64String(passwordActual));
-            if (!utilidad.Comparar(user.password, passwordActual))
-            {
-                throw new ExceptionGeneric(ExceptionGenericTypes.Validations, "Contraseña actual inválida.");
-            }
-            user.password = utilidad.Encriptar(Encoding.UTF8.GetString(Convert.FromBase64String(passwordNueva)));
-            base.Actualizar(user);
-
-            return user;
-        }*/
-
-      /*
-        public User InactivateUser(User user)
-        {
-            if (user == null)
-            {
-                throw new ArgumentNullException(nameof(user));
-            }
-
-            if (!user.activo.Equals("True"))
-            {
-                throw new ExceptionGeneric(ExceptionGenericTypes.Validations, "El user se encuentra inactivo.");
-            }
-
-            user.activo = "False";
-            this.userRepository.Update(user);
-            return user;
-        }
-      */
 
         /// <summary>
         /// 
